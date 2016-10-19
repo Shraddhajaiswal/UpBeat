@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-0m-sUl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-0m-sUl" customClass="StylingView" customModule="UpBeat" customModuleProvider="target">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UpBeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpt-UE-2V3">
                                         <frame key="frameInset" minX="9" minY="-12" width="227" height="157"/>
@@ -46,6 +46,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="275" id="IYW-rw-DFq"/>
                                         </constraints>
+                                        <color key="textColor" red="0.32204166670000001" green="0.32204166670000001" blue="0.32204166670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -53,9 +54,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="275" id="42T-qS-hL7"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.32204166670000001" green="0.32204166670000001" blue="0.32204166670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dg-ah-Toe">
                                         <subviews>
@@ -68,6 +69,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTT-hQ-GEn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfD-78-j2h">
                                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,6 +79,9 @@
                                                 <state key="normal" title="Login with Facebook">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGi-a1-2lw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -98,12 +105,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="ScX-nR-eTL" id="7ck-Aq-1sg"/>
                         <outlet property="logo" destination="zpt-UE-2V3" id="cya-jc-B6T"/>
+                        <outlet property="passwrdField" destination="0Px-dR-spD" id="dJ9-hb-3WT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882.39999999999998" y="-430.43478260869568"/>
+            <point key="canvasLocation" x="-958" y="-813"/>
         </scene>
     </scenes>
 </document>
